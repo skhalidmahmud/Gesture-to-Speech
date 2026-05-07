@@ -1,0 +1,28 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.venv/
+venv/
+ENV/
+env/
+
+# ML/AI specific
+*.h5
+*.pth
+*.pt
+*.onnx
+*.weights
+*.pkl
+data/raw/
+data/processed/
+
+# OS/System
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
