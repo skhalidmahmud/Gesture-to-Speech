@@ -39,3 +39,15 @@ I hit a major roadblock with Python 3.14—it was too new for the standard AI li
 **Result:**
 The vision engine is now rock-solid. It tracks hands faster than before and the manual drawing logic gives me full control over how the AI "sees" the world. I'm now ready to start teaching it actual gestures.
 
+### Log 3: The Brain is Born
+I've successfully trained the AI model! This was the most data-intensive part of the project.
+
+**What I did:**
+- I installed **TensorFlow** and **Scikit-Learn** to build the deep learning pipeline.
+- I implemented an **LSTM (Long Short-Term Memory)** neural network. I chose LSTM because gestures are sequences of movements, and LSTMs are specifically designed to remember patterns over time.
+- I trained the model on the custom dataset I recorded (HELLO and THANKS).
+- I built the final **inference engine** that performs real-time recognition.
+
+**How it works:**
+The app maintains a 30-frame buffer of hand landmarks. Every time a new frame comes in, the 30-frame sequence is passed to the trained model. If the model is more than 80% confident, it displays the recognized word on the screen. I now have a working prototype of a Sign Language translator!
+
