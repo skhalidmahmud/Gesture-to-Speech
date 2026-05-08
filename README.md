@@ -28,3 +28,14 @@ I've officially started building the system! I decided to begin with **MediaPipe
 **How it works:**
 The script captures each frame from my camera, converts it to RGB, and passes it to the MediaPipe hands model. The model then returns a list of coordinates for my finger joints, which I'm drawing back onto the screen using OpenCV. This is the foundation I'll use later to collect data and train my custom gesture classifier.
 
+### Log 2: Stability and Upgrades
+I hit a major roadblock with Python 3.14—it was too new for the standard AI libraries and caused the system to crash. Instead of giving up, I performed a "technical pivot."
+
+**What I did:**
+- I downgraded my environment to **Python 3.12 (Stable)** to ensure long-term reliability.
+- I upgraded my code to use the **Modern MediaPipe Tasks API** instead of the legacy solutions.
+- Since the new API doesn't have an automatic "drawer," I manually programmed the skeleton logic using OpenCV.
+
+**Result:**
+The vision engine is now rock-solid. It tracks hands faster than before and the manual drawing logic gives me full control over how the AI "sees" the world. I'm now ready to start teaching it actual gestures.
+
